@@ -52,7 +52,7 @@ class InteractiveRecord
     DB[:conn].execute(sql)
   end
 
-  def self.find_by(attr{})
+  def self.find_by(attr={})
     attrArr = attr.to_a
     attrArr = attrArr[0]
     sql = "SELECT * FROM #{self.table_name} WHERE #{attrArr[0]} = '#{attrArr[1]}'"
